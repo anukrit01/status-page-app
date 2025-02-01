@@ -1,0 +1,16 @@
+{
+    "name": "status-page-app",
+    "version": "1.0.0",
+    "description": "Status Page Application",
+    "scripts": {
+      "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+      "start:backend": "cd backend && npm start",
+      "start:frontend": "cd frontend/status-page-frontend && ng serve",
+      "install:all": "npm run install:backend && npm run install:frontend",
+      "install:backend": "cd backend && npm install",
+      "install:frontend": "cd frontend/status-page-frontend && npm install"
+    },
+    "devDependencies": {
+      "concurrently": "^7.0.0"
+    }
+  }
